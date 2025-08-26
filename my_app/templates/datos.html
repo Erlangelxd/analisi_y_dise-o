@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        padding: 50px;
+        background-image: url(https://paralelo32cdn.eleco.com.ar/media/2017/08/Como-Subir-un-GIF-a-Facebook-Twitter-e-Instagram.gif);
+        background-size: cover;
+    }
+    label{
+        color: white;
+        font-size: 30px;
+    }
+    input{
+        font-size: 30px;
+    }
+    button{
+        font-size: 30px;
+        background-color: rgb(119, 172, 207);
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        color: white;
+        cursor: pointer;
+    }
+
+</style>
+<body>
+    <form action="post">
+        {% csrf_token %}
+        <label for="text">Paterno: </label>
+        <input type="text" id="paterno" name="paterno" required placeholder="Dame tu apellido paterno">
+        <br>
+        <label for="text">Materno: </label>
+        <input type="text" id="paterno" name="paterno" required placeholder="Dame tu apellido materno">
+        <br>
+        <label for="text">Nombre: </label>
+        <input type="text" id="nombre" name="nombre" required placeholder="Dame tu nombre">
+        <br>
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+</html>

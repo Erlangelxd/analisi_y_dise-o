@@ -8,3 +8,5 @@ def login(request):
     return render(request, 'Login.html')
 def calcularFactorial(request):
     return render(request, 'factorial.html')
+def datos(request):
+    return render(request, 'datos.html')
