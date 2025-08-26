@@ -1,5 +1,8 @@
 from django.http import HttpResponse
+from django.shortcuts import render
 def proy1(request):
-    return HttpResponse("<h1>Proyecto 1</h1>")
+    return HttpResponse("<h1>Bienvenidos a mi pagina</h1>")
 def proy2(request):
-    return HttpResponse("<h1>Proyecto 2</h1>")
+    return render(request, 'log.html')
+def login(request):
+    return render(request, 'Login.html')

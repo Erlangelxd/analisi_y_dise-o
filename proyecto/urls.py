@@ -20,6 +20,6 @@ from django.urls import path
 from my_app import views
 urlpatterns = [
     #path("admin/", admin.site.urls),
-    path("", views.proy1, name="proyecto 1"),
-    path("p2/", views.proy2, name="proyecto 2")
+    path("", views.login, name="login"),
+    path("p2/", views.proy2, name="proyecto 2"),
 ]
