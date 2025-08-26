@@ -1,139 +1,40 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Periódico Digital: Tu Noticia al Día</title>
-    <style>
-        body {
-            font-family: 'Georgia', serif;
-            margin: 0;
-            padding: 20px;
-            background-color: #f4f4f4;
-            color: #333;
-            line-height: 1.6;
-        }
-
-        .contenedor-periodico {
-            max-width: 1000px;
-            margin: auto;
-            background-color: #fff;
-            padding: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        /* Bloque del Titular Principal */
-        .titular-principal {
-            text-align: center;
-            padding: 30px 0;
-            border-bottom: 2px solid #333;
-            margin-bottom: 20px;
-        }
-
-        .titular-principal h1 {
-            font-size: 3em;
-            font-weight: bold;
-            color: #000;
-            margin: 0;
-        }
-
-        .titular-principal p {
-            font-style: italic;
-            color: #666;
-            margin-top: 5px;
-        }
-
-        /* Bloque de Noticias Destacadas */
-        .seccion-destacada {
-            display: flex;
-            gap: 20px;
-            margin-bottom: 30px;
-        }
-
-        .articulo-destacado {
-            flex: 1;
-            border: 1px solid #ddd;
-            padding: 15px;
-            background-color: #fafafa;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-        }
-
-        .articulo-destacado h2 {
-            font-size: 1.5em;
-            margin-top: 0;
-            color: #004d99;
-        }
-
-        .articulo-destacado img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-            margin-bottom: 10px;
-        }
-
-        /* Bloque de Noticias Secundarias */
-        .seccion-secundaria {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-        }
-
-        .articulo-secundario {
-            border: 1px solid #ddd;
-            padding: 15px;
-            background-color: #f9f9f9;
-        }
-
-        .articulo-secundario h3 {
-            font-size: 1.2em;
-            margin-top: 0;
-            color: #333;
-        }
-
-    </style>
+    <title>Document</title>
 </head>
+<style>
+    body{
+        padding: 50px;
+        background-image: url(https://paralelo32cdn.eleco.com.ar/media/2017/08/Como-Subir-un-GIF-a-Facebook-Twitter-e-Instagram.gif);
+        background-size: cover;
+    }
+    label{
+        color: white;
+        font-size: 30px;
+    }
+    input{
+        font-size: 30px;
+    }
+    button{
+        font-size: 30px;
+        background-color: rgb(119, 172, 207);
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        color: white;
+        cursor: pointer;
+    }
+
+</style>
 <body>
-
-    <div class="contenedor-periodico">
-
-        <header class="titular-principal">
-            <h1>Periódico Digital</h1>
-            <p>La noticia de hoy, directo a tu pantalla.</p>
-        </header>
-
-        <section class="seccion-destacada">
-            <div class="articulo-destacado">
-                <img src="https://via.placeholder.com/400x250" alt="Noticia destacada 1">
-                <h2>El Futuro de la Tecnología en la Inteligencia Artificial</h2>
-                <p>Expertos predicen que la IA revolucionará la industria en los próximos cinco años, afectando la forma en que trabajamos y vivimos...</p>
-            </div>
-            <div class="articulo-destacado">
-                <img src="https://via.placeholder.com/400x250" alt="Noticia destacada 2">
-                <h2>Descubren Nuevas Especies Marinas en las Profundidades del Océano</h2>
-                <p>Una expedición científica ha revelado criaturas asombrosas en zonas inexploradas, ampliando nuestro conocimiento sobre la biodiversidad...</p>
-            </div>
-        </section>
-
-        <section class="seccion-secundaria">
-            <div class="articulo-secundario">
-                <h3>Economía: El Mercado de Criptomonedas se Estabiliza</h3>
-                <p>Después de un periodo de alta volatilidad, el Bitcoin y otras criptomonedas muestran signos de recuperación...</p>
-            </div>
-            <div class="articulo-secundario">
-                <h3>Deportes: El Equipo Local Gana el Campeonato Regional</h3>
-                <p>En un emocionante partido, el equipo de fútbol de la ciudad se corona campeón, celebrando con su afición...</p>
-            </div>
-            <div class="articulo-secundario">
-                <h3>Cultura: Inauguran Gran Exposición de Arte Contemporáneo</h3>
-                <p>Una colección de obras de artistas emergentes se presenta al público en el Museo Nacional de Arte...</p>
-            </div>
-            <div class="articulo-secundario">
-                <h3>Salud: Consejos para una Mejor Calidad de Sueño</h3>
-                <p>Especialistas en salud ofrecen pautas sencillas para mejorar el descanso y combatir el insomnio crónico...</p>
-            </div>
-        </section>
-
-    </div>
-
+    <form method="post">
+        {% csrf_token %}
+        <label for="numero">Ingrese un numero: </label>
+        <input type="number" id="numero" name="numero" required placeholder="Escribe un numero">
+        <button type="submit">Calcular factorial</button>
+    </form>
 </body>
 </html>

@@ -6,3 +6,5 @@ def proy2(request):
     return render(request, 'log.html')
 def login(request):
     return render(request, 'Login.html')
+def calcularFactorial(request):
+    return render(request, 'factorial.html')
