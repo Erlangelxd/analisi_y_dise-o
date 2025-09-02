@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factorial</title>
+</head>
+<style>
+    h1{
+        font-size: 30px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+    h2{
+        font-size: 30px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+    label{
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        padding: 10px;
+        font-size: 20px;
+    }
+    input{
+        padding: 5px;
+        border-radius: 10px;
+    }
+    button{
+        padding: 10px;
+        color: white;
+        background-color: royalblue;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        border-radius: 20px;
+        font-size: 20px;
+        height: auto;
+    }
+    button:hover{
+        color: black;
+        background-color: rgb(255, 255, 255);
+    }
+    div{
+        padding: 10px;
+    }
+    section{
+        text-align: center;
+        background-color: rgb(54, 123, 170);
+        height: auto;
+        width: 300px;
+        border-radius: 20px;
+        padding: 20px;
+    }
+    body{
+        padding: 50px;
+        background-image: url(https://paralelo32cdn.eleco.com.ar/media/2017/08/Como-Subir-un-GIF-a-Facebook-Twitter-e-Instagram.gif);
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+</style>
+<body>
+    <section>
+            <h1>Factorial</h1>
+        <div>
+            <form method="POST">
+                {% csrf_token %}
+                <label for="numero">Introduce un número:</label>
+                <input type="number" id="numero" name="numero" required min="0">
+                <button type="submit">Calcular</button>
+            </form>
+            {% if resultado is not None %}
+                <h2>Resultado: {{ resultado }}</h2>
+            {% endif %}
+        </div>
+    </section>
+    
+</body>
+</html>

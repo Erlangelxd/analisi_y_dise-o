@@ -5,4 +5,5 @@ urlpatterns = [
     # path("conv/", views.proy2, name="proyecto2"),
     path("fact/", views.calcularFactorial, name="factorial"),
     path("datos/", views.datos, name="log"),
+    
 ]

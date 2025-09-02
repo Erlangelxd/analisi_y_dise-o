@@ -54,34 +54,34 @@
 </style>
 <body>
     <section>
-    <h2>Registrate</h2>
-    <form action="/login/" method="post">
-        {% csrf_token %}
-        <div>
-            <label for="nombre">Ingresa tu nombre: </label>
-            <br>
-            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre">
-        </div>
-        <div>
-            <label for="edad">Ingresa tu edad: </label>
-            <br>
-            <input type="number" id="edad" name="edad" placeholder="Tu edad">
-        </div>
-        <div>
-            <label for="genero">Género: </label>
-            <br>
-            <div role="radiogroup" aria-labelledby="genero">
-                <input type="radio" id="hombre" name="genero" value="hombre">
-                <label for="hombre">Hombre</label>
-                <input type="radio" id="mujer" name="genero" value="mujer">
-                <label for="mujer">Mujer</label>
+        <h2>Regístrate</h2>
+        <form action="" method="post">
+            {% csrf_token %}
+            <div>
+                <label for="nombre">Ingresa tu nombre: </label>
                 <br>
-                <input type="radio" id="transformer" name="genero" value="transformer">
-                <label for="transformer">Transformer</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Tu nombre">
             </div>
-        </div>
-        <button type="submit">Registrarse</button>
-    </form>
-</section>
+            <div>
+                <label for="edad">Ingresa tu edad: </label>
+                <br>
+                <input type="number" id="edad" name="edad" placeholder="Tu edad">
+            </div>
+            <div>
+                <label for="genero">Género: </label>
+                <br>
+                <div role="radiogroup" aria-labelledby="genero">
+                    <input type="radio" id="hombre" name="genero" value="hombre">
+                    <label for="hombre">Hombre</label>
+                    <input type="radio" id="mujer" name="genero" value="mujer">
+                    <label for="mujer">Mujer</label>
+                    <br>
+                    <input type="radio" id="transformer" name="genero" value="transformer">
+                    <label for="transformer">Transformer</label>
+                </div>
+            </div>
+            <button type="submit">Registrarse</button>
+        </form>
+    </section>
 </body>
 </html>
