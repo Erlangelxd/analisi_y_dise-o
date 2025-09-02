@@ -1,40 +1,87 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Login</title>
 </head>
 <style>
+    h2{
+        font-size: 30px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+    label{
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        padding: 10px;
+        font-size: 20px;
+    }
+    input{
+        padding: 5px;
+        border-radius: 10px;
+    }
+    button{
+        padding: 10px;
+        color: white;
+        background-color: royalblue;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        border-radius: 20px;
+        font-size: 20px;
+        height: auto;
+    }
+    button:hover{
+        color: black;
+        background-color: rgb(255, 255, 255);
+    }
     div{
+        padding: 10px;
+    }
+    section{
         text-align: center;
-        background-color: rgb(119, 172, 207);
+        background-color: rgb(54, 123, 170);
         height: auto;
         width: 300px;
         border-radius: 20px;
-    }
-    p{
-        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        padding: 20px;
     }
     body{
         padding: 50px;
         background-image: url(https://paralelo32cdn.eleco.com.ar/media/2017/08/Como-Subir-un-GIF-a-Facebook-Twitter-e-Instagram.gif);
         background-size: cover;
-        }
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 </style>
 <body>
-    <div>
-        <h2>
-            Registrate
-        </h2>
-        <p>Ingresa tu nombre</p>
-        <input type="text">
-        <p>Ingresa tu edad</p>
-        <input type="number">
-        <p>Genero</p>
-        <input type="">
-        <br>
-        <button>Registrarse</button>
-    </div>
+    <section>
+    <h2>Registrate</h2>
+    <form action="/login/" method="post">
+        {% csrf_token %}
+        <div>
+            <label for="nombre">Ingresa tu nombre: </label>
+            <br>
+            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre">
+        </div>
+        <div>
+            <label for="edad">Ingresa tu edad: </label>
+            <br>
+            <input type="number" id="edad" name="edad" placeholder="Tu edad">
+        </div>
+        <div>
+            <label for="genero">Género: </label>
+            <br>
+            <div role="radiogroup" aria-labelledby="genero">
+                <input type="radio" id="hombre" name="genero" value="hombre">
+                <label for="hombre">Hombre</label>
+                <input type="radio" id="mujer" name="genero" value="mujer">
+                <label for="mujer">Mujer</label>
+                <br>
+                <input type="radio" id="transformer" name="genero" value="transformer">
+                <label for="transformer">Transformer</label>
+            </div>
+        </div>
+        <button type="submit">Registrarse</button>
+    </form>
+</section>
 </body>
 </html>
