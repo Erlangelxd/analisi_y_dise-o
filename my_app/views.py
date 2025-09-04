@@ -7,6 +7,38 @@ from django.shortcuts import render
 def login(request):
     return render(request, './paginas/Login.html')
 
+def calcular_masa_corporal(request):
+    imc=None
+    clasificacion=""
+    if request.method == 'POST':
+        peso=request.POST.get("peso")
+        altura=request.POST.get("altura")
+        if peso is not None and altura is not None:
+            try:
+                peso=float(peso)
+                altura=float(altura)
+                if altura > 0:
+                    imc = peso / (altura ** 2)
+                else:
+                    imc = "La altura debe ser mayor que cero."
+                if imc == 18.5:
+                    clasificacion = "Bajo peso"
+                    print(clasificacion) 
+                elif imc >= 18.5 and imc < 24.9:
+                    clasificacion = "Normal"
+                    print(clasificacion) 
+                elif imc >= 25 and imc < 29.9:
+                    clasificacion = "Señor barriga"
+                    print(clasificacion) 
+                elif imc >= 30:
+                    clasificacion = "Eres un botija"
+                    print(clasificacion) 
+            except ValueError:
+                imc = "Por favor, ingrese valores numéricos válidos."
+    print(imc)
+    print(clasificacion)    
+    return render(request, './paginas/masa_corporal.html', {'imc': imc, "clasificacion": clasificacion})
+
 def calcularFactorial(request):
     resultado = None
     if request.method == 'POST':

@@ -7,5 +7,5 @@ urlpatterns = [
     path("fibo/", views.serie_fibonacci, name="fibonacci"),
     path("datos/", views.datos, name="log"),
     path("primo/", views.primo, name="primo"),
-
+    path("calculadora/", views.calcular_masa_corporal, name="calculadora"),
 ]
